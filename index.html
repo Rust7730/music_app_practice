@@ -1,43 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./styles.css">
-    <script type="module" src="./main.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="music-player">
-            <nav>
-                <div class="circle">
-                    <span>back</span>
+    <div class="player-container">
+        <div class="player-content">
+            <header class="player-header">
+                <span class="next-button">NEXT</span>
+            </header>
+            
+            <div class="now-playing">
+                <div class="album-art-wrapper">
+                    <img src="./media/default_img.jpg" alt="Portada del álbum" class="album-art">
                 </div>
-                <div class="circle">
-                    <span>bars</span>
+                
+                <div class="progress-bar-container">
+                    <div class="progress-bar"></div>
                 </div>
-            </nav>
-
-            <div id="song-details">
-                <img src="./media/default_img.jpg" alt="" id="song-img">
-                <h1 id="title"></h1>
-                <h3 id="artist"></h3>
             </div>
 
-            <div class="audio">
-                <audio controls id="media" hidden>
-                    <!--<source id="audio" src="" type="audio/mpeg">-->
-                </audio>
-                <input type="range" value="0" id="progress">
+            <div class="song-info">
+                <h2 class="song-title">HABLA TU ESPEJO</h2>
+                <h3 class="artist-name">CUARTETO DE NOS</h3>
             </div>
 
-            <div class="song-controls">
-                <span id="lastest">last</span>
-                <span id="play" class="play">play</span>
-                <span id="forward">forward</span>
+            <div class="controls-container">
+                <span class="material-symbols-outlined control-icon">
+                    skip_previous
+                </span>
+                <span class="material-symbols-outlined control-icon">
+                    play_arrow
+                </span>
+                <span class="material-symbols-outlined control-icon">
+                    skip_next
+                </span>
             </div>
+        </div>
 
+        <div class="playlist-sidebar">
+            <div class="playlist-item">
+                <div class="item-thumbnail"></div>
+                <div class="item-details">
+                    <p class="item-title">HABLA TU ESPEJO</p>
+                    <p class="item-artist">CUARTETO DE NOS</p>
+                </div>
+            </div>
+            <div class="playlist-item">
+                <div class="item-thumbnail"></div>
+                <div class="item-details">
+                    <p class="item-title">HABLA TU ESPEJO</p>
+                    <p class="item-artist">CUARTETO DE NOS</p>
+                </div>
+            </div>
+            <div class="playlist-item">
+                <div class="item-thumbnail"></div>
+                <div class="item-details">
+                    <p class="item-title">HABLA TU ESPEJO</p>
+                    <p class="item-artist">CUARTETO DE NOS</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
